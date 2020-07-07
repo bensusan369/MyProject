@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  你好 hello！ 呵呵
+<a  href="http://www.baidu.com?abc=123"  target="_blank" >百度</a><br>
+
+  <a  href="http://www.baidu.com"  target="_self" >百度</a><br>
+  <a  href="http://www.baidu.com"  target="_parent" >百度</a><br>
+  <a  href="http://www.baidu.com"  target="xxxx" >百度</a><br>
+  <a  href="index.jsp"    >index</a>
+<!--<iframe name="xxxx" width="500" height="300"> </iframe>-->
+  跳页面  a    可以通过?id=22 的形式将数据信息带过去
+        form 表单  将表单中的数据信息带过去
+<br>
+  <form   action="index.jsp" method="get">
+    <input type="text" name="ab" value="100"  readonly   style="width: 100px;" placeholder="请输入用户名"><br>
+      <input type="password" name="pwd" style="width: 100px;" ><br>
+      男<input type="radio" name="sex" checked="checked" value="男">
+      女<input type="radio" name="sex" value="女"><br>
+      足球<input type="checkbox" value="足球"  checked    name="aihao">
+      篮球<input type="checkbox" value="篮球球"    name="aihao">
+      乒乓球<input type="checkbox" value="乒乓球"  name="aihao">
+<br>
+ 隐藏域 <input type="hidden" name="id" value="123"><br>
+      <select name="zhiwu"  multiple>
+          <option value=""  >全部</option>
+          <option value="员工"  selected  >员工</option>
+          <option value="经理"  >经理</option>
+      </select><br>
+      文件域<input type="file">
+      <textarea cols="30" rows="5">文本域</textarea>
+<br>
+
+      <marquee direction="left" ><img src="images/abc.gif" style="width: 150px;height: 150px;">
+      </marquee>
+
+    <input type="submit" value="提交"><br>
+  </form>
+
+  <img src="images/abc.gif" style="width: 250px;height: 250px;">
+
+
+
+</body>
+</html>

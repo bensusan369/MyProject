@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.edu.hljit.cs17.g1.dao.ZjDGwlbDao" >
+    <select id="getAll"  resultMap="ZjDGwlbMap" >
+        select * from zj_d_gwlb
+    </select>
+    <resultMap id="ZjDGwlbMap" type="ZjDGwlb">
+        <result property="dmid" column="dmid"></result>
+        <result property="dmmc" column="dmmc"></result>
+        <result property="sfky" column="sfky"></result>
+        <result property="xh" column="xh"></result>
+
+    </resultMap>
+
+
+
+
+
+
+
+</mapper>

@@ -1,0 +1,130 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>劳动力市场管理系统-用户查询列表</title>
+<link href="${pageContext.request.contextPath }/css/main.css" rel="stylesheet" type="text/css" media="all" />
+<script src="${pageContext.request.contextPath }/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+</head>
+
+<body class="content-pages-body">
+<div class="content-pages-wrap">
+	<div class="commonTitle">
+	  <h2>当前位置：&nbsp;&gt;&gt; 系统管理&nbsp;&gt;&gt;用户管理 </h2>
+	</div>
+
+    <!--//commonTableSearch-->
+    <form name="fm" action="" method="post">
+   	 	<input type="hidden" name="uid" value=""/>
+    	<input type="hidden" name="ActionType" value="" />
+    <div id="buttenInsert">
+    
+    </div>
+	
+    <table width="101%" border="0" cellpadding="0" cellspacing="1" class="commonTable">
+        <tr>
+            <th>序号</th>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>用户昵称</th>
+            <th>密保问题</th>
+            <th>密保答案</th>
+            <th class="editColDefault">操作</th>
+        </tr>
+        <c:forEach items="${users }" var="user" varStatus="status">
+        <tr>
+            <td align="center">${user.userId }</td>
+            <td align="center">${user.userLoginName }</td>
+            <td align="center">${user.userPassword }</td>
+			<td align="center">${user.userName }</td>
+			<td align="center">${user.question }</td>
+			<td align="center">${user.answer }</td>
+            <td align="center">
+                <a href="#" class="btnIconDel" title="删除" onclick="delOneRow(this);"></a>
+            </td>
+        </tr>
+        </c:forEach>
+  	</table>
+    <!--//commonTable-->
+    
+
+<!--自定义标签式的分页-->
+<pt:newpagetag tableName="" action="user"></pt:newpagetag>
+</body>
+</html>
+<script type="text/javascript">
+
+	function gotoUpdatePage(a){
+		var tab=a.parentNode.parentNode.parentNode;
+		var thistr=a.parentNode.parentNode;
+		var tds = thistr.cells; 
+		
+		fm.oneId.value=tds[1].innerText;
+		fm.ActionType.value="gotoupdatepage";
+		fm.action = '${pageContext.request.contextPath }/userlist';
+		fm.submit();
+	}
+
+	function showDetail(a){
+		var tab=a.parentNode.parentNode.parentNode;
+		var thistr=a.parentNode.parentNode;
+		var tds = thistr.cells; 
+		
+		fm.oneId.value=tds[1].innerText;
+		fm.ActionType.value="showDetail";
+		fm.action = '${pageContext.request.contextPath }/userlist';
+		fm.submit();
+	}
+	
+	
+	function gotoAddPage(){
+		fm.ActionType.value="gotoaddpage";
+		fm.action = '${pageContext.request.contextPath }/userlist';
+		fm.submit();
+	}
+	
+	function changeAllCheckbox(){
+		for(var i=0;i<fm.oid.length;i++){
+			fm.oid[i].checked = fm.oids.checked;
+		}
+	}
+	
+	function removeAny(){
+		var flag = false;
+		for(var i=0;i<fm.oid.length;i++){
+			if(fm.oid[i].checked){
+				flag = true;
+				break;
+			}
+		}
+		
+		if(!flag){
+			alert("请至少勾选一项待删除的数据!");
+			return false;
+		}
+		
+		fm.ActionType.value = "remove";
+		fm.action = '${pageContext.request.contextPath }/userlist';
+		fm.submit();
+	}
+	
+	function delOneRow(a){
+		var tab=a.parentNode.parentNode.parentNode;
+		var thistr=a.parentNode.parentNode;
+		var tds = thistr.cells; 
+		
+		fm.uid.value=tds[0].innerText;
+		fm.ActionType.value="delOneRow";
+		fm.action = '${pageContext.request.contextPath }/user';
+		
+		// 利用table的deleteRow方法根据行的rowIndex删除元素
+		tab.deleteRow(a.parentNode.parentNode.rowIndex);
+		fm.submit();
+	}
+	
+
+</script>
