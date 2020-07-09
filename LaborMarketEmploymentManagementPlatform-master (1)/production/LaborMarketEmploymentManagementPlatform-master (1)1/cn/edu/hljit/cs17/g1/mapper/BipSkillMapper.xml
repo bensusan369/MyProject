@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.edu.hljit.cs17.g1.dao.BipSkillMapper" >
+  <resultMap id="BaseResultMap" type="cn.edu.hljit.cs17.g1.pojo.BipSkill" >
+    <id column="bip_s_id" property="bipSId" jdbcType="VARCHAR" />
+    <result column="bip_id" property="bipId" jdbcType="VARCHAR" />
+    <result column="bip_s_years" property="bipSYears" jdbcType="VARCHAR" />
+    <result column="bip_s_zyjn" property="bipSZyjn" jdbcType="VARCHAR" />
+    <result column="bip_s_jsdj" property="bipSJsdj" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    bip_s_id, bip_id, bip_s_years, bip_s_zyjn, bip_s_jsdj
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from bip_skill
+    where bip_s_id = #{bipSId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from bip_skill
+    where bip_s_id = #{bipSId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.edu.hljit.cs17.g1.pojo.BipSkill" >
+    insert into bip_skill (bip_s_id, bip_id, bip_s_years, 
+      bip_s_zyjn, bip_s_jsdj)
+    values (#{bipSId,jdbcType=VARCHAR}, #{bipId,jdbcType=VARCHAR}, #{bipSYears,jdbcType=VARCHAR}, 
+      #{bipSZyjn,jdbcType=VARCHAR}, #{bipSJsdj,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.edu.hljit.cs17.g1.pojo.BipSkill" >
+    insert into bip_skill
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="bipSId != null" >
+        bip_s_id,
+      </if>
+      <if test="bipId != null" >
+        bip_id,
+      </if>
+      <if test="bipSYears != null" >
+        bip_s_years,
+      </if>
+      <if test="bipSZyjn != null" >
+        bip_s_zyjn,
+      </if>
+      <if test="bipSJsdj != null" >
+        bip_s_jsdj,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="bipSId != null" >
+        #{bipSId,jdbcType=VARCHAR},
+      </if>
+      <if test="bipId != null" >
+        #{bipId,jdbcType=VARCHAR},
+      </if>
+      <if test="bipSYears != null" >
+        #{bipSYears,jdbcType=VARCHAR},
+      </if>
+      <if test="bipSZyjn != null" >
+        #{bipSZyjn,jdbcType=VARCHAR},
+      </if>
+      <if test="bipSJsdj != null" >
+        #{bipSJsdj,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.edu.hljit.cs17.g1.pojo.BipSkill" >
+    update bip_skill
+    <set >
+      <if test="bipId != null" >
+        bip_id = #{bipId,jdbcType=VARCHAR},
+      </if>
+      <if test="bipSYears != null" >
+        bip_s_years = #{bipSYears,jdbcType=VARCHAR},
+      </if>
+      <if test="bipSZyjn != null" >
+        bip_s_zyjn = #{bipSZyjn,jdbcType=VARCHAR},
+      </if>
+      <if test="bipSJsdj != null" >
+        bip_s_jsdj = #{bipSJsdj,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where bip_s_id = #{bipSId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.edu.hljit.cs17.g1.pojo.BipSkill" >
+    update bip_skill
+    set bip_id = #{bipId,jdbcType=VARCHAR},
+      bip_s_years = #{bipSYears,jdbcType=VARCHAR},
+      bip_s_zyjn = #{bipSZyjn,jdbcType=VARCHAR},
+      bip_s_jsdj = #{bipSJsdj,jdbcType=VARCHAR}
+    where bip_s_id = #{bipSId,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.edu.hljit.cs17.g1.dao.LdlscUserMapper" >
+  <resultMap id="BaseResultMap" type="cn.edu.hljit.cs17.g1.pojo.LdlscUser" >
+    <id column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="USERLOGINNAME" property="userloginname" jdbcType="VARCHAR" />
+    <result column="USERPASSWORD" property="userpassword" jdbcType="VARCHAR" />
+    <result column="USERINDEX" property="userindex" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    user_id, USER_NAME, USERLOGINNAME, USERPASSWORD, USERINDEX
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from ldlsc_user
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from ldlsc_user
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.edu.hljit.cs17.g1.pojo.LdlscUser" >
+    insert into ldlsc_user (user_id, USER_NAME, USERLOGINNAME, 
+      USERPASSWORD, USERINDEX)
+    values (#{userId,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{userloginname,jdbcType=VARCHAR}, 
+      #{userpassword,jdbcType=VARCHAR}, #{userindex,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.edu.hljit.cs17.g1.pojo.LdlscUser" >
+    insert into ldlsc_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="userName != null" >
+        USER_NAME,
+      </if>
+      <if test="userloginname != null" >
+        USERLOGINNAME,
+      </if>
+      <if test="userpassword != null" >
+        USERPASSWORD,
+      </if>
+      <if test="userindex != null" >
+        USERINDEX,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userloginname != null" >
+        #{userloginname,jdbcType=VARCHAR},
+      </if>
+      <if test="userpassword != null" >
+        #{userpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userindex != null" >
+        #{userindex,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.edu.hljit.cs17.g1.pojo.LdlscUser" >
+    update ldlsc_user
+    <set >
+      <if test="userName != null" >
+        USER_NAME = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userloginname != null" >
+        USERLOGINNAME = #{userloginname,jdbcType=VARCHAR},
+      </if>
+      <if test="userpassword != null" >
+        USERPASSWORD = #{userpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userindex != null" >
+        USERINDEX = #{userindex,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.edu.hljit.cs17.g1.pojo.LdlscUser" >
+    update ldlsc_user
+    set USER_NAME = #{userName,jdbcType=VARCHAR},
+      USERLOGINNAME = #{userloginname,jdbcType=VARCHAR},
+      USERPASSWORD = #{userpassword,jdbcType=VARCHAR},
+      USERINDEX = #{userindex,jdbcType=VARCHAR}
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+</mapper>

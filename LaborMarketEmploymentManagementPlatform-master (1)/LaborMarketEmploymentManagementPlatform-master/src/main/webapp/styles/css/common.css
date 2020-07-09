@@ -1,0 +1,1048 @@
+/*
+####################################################################
+#  ��    �ƣ�Ӧ�ÿ�������CSS����
+#  �棠������1.0
+#  ��Ȩ����: ��������������Ϣ�������޹�˾
+#  ��    ��: ������
+#  ˵    ��: ҳ������һ�ɵ��ô��ļ�������ʵ�ʷ��Ҫ���޸�������ʽ��δ�漰����ʽ����ϵ��������ڱ���β����ӣ����ʱ���ע�����ܡ�
+####################################################################
+*/
+/*ȫ��������ʽ---TEXT-DECORATION������ֵ����Ϊnone��underline*/
+
+
+
+/*-----------------ȫ������-----------------*/
+/*����1�׵Ĺ��������ã�Ĭ�ϵ�ȫ��ҳ����ʽ---�ž�*/
+body
+{
+    margin: 0 0 0 0;
+	FONT-FAMILY: ����,Arial; FONT-SIZE: 9pt;
+	/*���������ǹ���������ʽ*/
+	scrollbar-arrow-color:#000000;
+	scrollbar-track-color:#EEEEEE;
+	scrollbar-highlight-color:#E4E8EA;
+	scrollbar-face-color:#E4E8EA;
+	scrollbar-Shadow-color:#E4E8EA;
+	scrollbar-3dlight-color:#FFFFFF;
+	scrollbar-darkshadow-color:#808080;
+	background-color: #ffffff;
+
+}
+
+
+
+
+/*����1�ף�---�ž�*/
+/*ȫ�ֱ����������ʽ*/
+table,tr,td
+{
+	FONT-FAMILY: ����,Arial; 
+	FONT-SIZE: 9pt
+} 
+
+
+
+/*����1�ף�---�ž�*/
+/*ȫ��form�߾࣬����Ϊ��*/
+form
+{
+    margin: 0 0 0 0;
+}
+
+/*����1�ף�---�ž�*/
+
+
+
+
+
+/*����ѡ�����*/
+select 
+{
+	font:normal 9pt ����,Arial;/*����*/
+	color: #393939;
+	background-color:#ffffff;/*������ɫ*/
+}
+
+/*ȫ����������ʽ��Ӱ�쵥�������򡢶��������򡢵�ѡ��radio����ѡ��checkbox��Ĭ�ϰ�ť*/
+input,textarea 
+{
+	border:1px solid #D4D0C8;/*�ұ߼��±�������ɫ����ϸ*/
+	border-top:1px solid #808080;/*�ϱ��߳���������ɫ*/
+	border-left:1px solid #808080;/*���������������ɫ*/
+	font:normal 9pt ����,Arial;/*���ֶ��弰����*/
+	background-color:#ffffff;/*����������ɫ*/
+	color: #393939;
+	
+	}
+
+/*-----------------��������-----------------*/
+
+/*����ȫ��ҳ�棬ԭ���ǣ�������ʱĬ�����»��ߵĺ�ɫ�֣���С��Ҫ�󣬸�Ϊ������ʱĬ����������Ϊ��ɫ�֡���Ҫ����ȫ������ҳ--�ž�*/
+A:link {
+	FONT-SIZE: 9pt; COLOR: #017CCE; TEXT-DECORATION: none;
+}
+A:visited {
+	FONT-SIZE: 9pt; COLOR: #017CCE; TEXT-DECORATION: none;
+}
+A:active {
+	FONT-SIZE: 9pt; COLOR: #017CCE; TEXT-DECORATION: none;
+}
+A:hover {
+	FONT-SIZE: 9pt; COLOR: #64AFE1; TEXT-DECORATION: none;
+}
+
+
+
+/*��������ɫ�棬������ҳ����ɫ��Ŀ���ӻ���--�ž�*/
+.link1:link {
+	FONT-SIZE: 9pt; COLOR: #3C3838; TEXT-DECORATION: none;
+}
+.link1:visited {
+	FONT-SIZE: 9pt; COLOR: #3C3838; TEXT-DECORATION: none;
+}
+.link1:active {
+	FONT-SIZE: 9pt; COLOR: #3C3838; TEXT-DECORATION: none;
+}
+.link1:hover {
+	FONT-SIZE: 9pt; COLOR: #3C3838; TEXT-DECORATION: underline;
+}
+
+
+/*��������ɫ�棬����left��Ŀ���ӻ���--�ž�*/
+.link2:link {
+	FONT-SIZE: 9pt; COLOR: #505253; TEXT-DECORATION: none;
+}
+.link2:visited {
+	FONT-SIZE: 9pt; COLOR: #505253; TEXT-DECORATION: none;
+}
+.link2:active {
+	FONT-SIZE: 9pt; COLOR: #505253; TEXT-DECORATION: none;
+}
+.link2:hover {
+	FONT-SIZE: 9pt; COLOR: #505253; TEXT-DECORATION: underline;
+}
+
+
+
+
+/*����1�ף�������left��ߵİ�ɫ��������--�ž�*/
+.link01:link {
+	FONT-SIZE: 9pt; COLOR: #ffffff; TEXT-DECORATION: none;
+}
+.link01:visited {
+	FONT-SIZE: 9pt; COLOR: #ffffff; TEXT-DECORATION: none;
+}
+.link01:active {
+	FONT-SIZE: 9pt; COLOR: #ffffff; TEXT-DECORATION: none;
+}
+.link01:hover {
+	FONT-SIZE: 9pt; COLOR: #ffffff; TEXT-DECORATION: underline;
+}
+
+
+/*����1�ף�������right�ĵ���ɫ����Ŀ�����ӵ���--�ž�*/
+.link02:link {
+	FONT-SIZE: 9pt; COLOR: #3A6EA1; TEXT-DECORATION: none;
+}
+.link02:visited {
+	FONT-SIZE: 9pt; COLOR: #3A6EA1; TEXT-DECORATION: none;
+}
+.link02:active {
+	FONT-SIZE: 9pt; COLOR: #3A6EA1; TEXT-DECORATION: none;
+}
+.link02:hover {
+	FONT-SIZE: 9pt; COLOR: #3A6EA1; TEXT-DECORATION: underline
+}
+
+
+/*����1�ף�������right������ɫ��Ŀ�����ӵ���--�ž�*/
+.link03:link {
+	FONT-SIZE: 9pt; COLOR: #013267; TEXT-DECORATION: none;
+}
+.link03:visited {
+	FONT-SIZE: 9pt; COLOR: #013267; TEXT-DECORATION: none;
+}
+.link03:active {
+	FONT-SIZE: 9pt; COLOR: #013267; TEXT-DECORATION: none;
+}
+.link03:hover {
+	FONT-SIZE: 9pt; COLOR: #013267; TEXT-DECORATION: underline;
+}
+
+
+/*����1�ף�����ȫ��ҳ�棬������ʱĬ�����»��ߵĺ�ɫ�֣���Ҫ����ȫ������ҳ--�ž�*/
+.link04:link {
+	FONT-SIZE: 9pt;	COLOR: #000000;	TEXT-DECORATION: none;
+}
+.link04:visited {
+	FONT-SIZE: 9pt; COLOR: #000000; TEXT-DECORATION: none;
+}
+.link04:active {
+	FONT-SIZE: 9pt; COLOR: #000000; TEXT-DECORATION: none;
+}
+.link04:hover {
+	FONT-SIZE: 9pt; COLOR: #000000; TEXT-DECORATION: underline;
+}
+
+
+A.news:visited {
+	FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(); WIDTH: 100%; COLOR: #000000; LINE-HEIGHT: 22px; BACKGROUND-REPEAT: repeat; HEIGHT: 22px; TEXT-DECORATION: none
+}
+A.news:active {
+	FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(); WIDTH: 100%; COLOR: #015eb5; LINE-HEIGHT: 22px; BACKGROUND-REPEAT: repeat; HEIGHT: 22px; BACKGROUND-COLOR: #fffae6; TEXT-DECORATION: none
+}
+A.news:hover {
+	FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(); WIDTH: 100%; COLOR: #015eb5; LINE-HEIGHT: 22px; BACKGROUND-REPEAT: repeat; HEIGHT: 22px; BACKGROUND-COLOR: #fffae6; TEXT-DECORATION: none
+}
+A.news:link {
+	FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(); WIDTH: 100%; COLOR: #000000; LINE-HEIGHT: 22px; BACKGROUND-REPEAT: repeat; HEIGHT: 22px; TEXT-DECORATION: none
+}
+
+
+/*----------------------------------*/
+
+/*����1�ף�������index��ҳ��top����--�ž�*/
+.mybg {
+    margin: 0 0 0 0;
+	FONT-FAMILY: ����,Arial; FONT-SIZE: 9pt;
+	/*���������ǹ���������ʽ*/
+	scrollbar-arrow-color:#000000;
+	scrollbar-track-color:#EEEEEE;
+	scrollbar-highlight-color:#E4E8EA;
+	scrollbar-face-color:#E4E8EA;
+	scrollbar-Shadow-color:#E4E8EA;
+	scrollbar-3dlight-color:#FFFFFF;
+	scrollbar-darkshadow-color:#808080;
+	background-color: #ffffff;
+	/*��������ȫ�ֲ�ͬ�ı���ɫ�ͱ���ͼ*/	
+	overflow:hidden;
+	background-image: url(no.gif);
+
+}
+
+/*����1�ף�leftҳ���zyjp��left��������---�ž�*/
+.leftbg {
+	background-color: #ffffff;
+	FONT-FAMILY: "����"; FONT-SIZE: 9pt
+}
+
+
+
+
+
+/*����1�ף�����ҳ���������������С��Ҫ���ӵ�---�ž�*/
+
+/*����������û�б���û�б�ֻ��ʾ�֣����Ҫ���������������������ô��ַ�������Ҫ��ҳ���ڼ��ϴ��룺<input disabled>��input�����disabled�ǲ�������������<select disabled>��select�����disabled�ǲ���ѡ���ѡ���*/
+/*�»��ߵ���¼�����ʽ ���� class="inputline" ��ӵ�Ŀ��<input>��,*/
+.inputline
+{
+	border:none;/*�����ޱ߿�*/
+	/*�����е����Ϳ�����solid��dashed��dotted*/
+	/*border-top:1px solid #000000;�����ϱ߿�Ϊ1  solidΪʵ�ߵ���˼*/
+	/*border-left:1px solid #000000;������߿�Ϊ1 solidΪʵ�ߵ���˼*/
+	/*border-bottom:1px solid #000000;�����ױ߿�Ϊ1 solidΪʵ�ߵ���˼*/
+	/*color:#000000;*/
+	font:normal 9pt ����,Arial;
+	background-color:transparent;/*������ޱ���ɫ*/
+}
+/*����1�ף�����ҳ�����������������ӱҪ���ӵ�---�ž�*/
+/*<input>��ֻ��������ܸ��ģ������»�����ʾ,*/
+.inputlinea
+{
+	border:none;/*�����ޱ߿�*/
+	/*�����е����Ϳ�����solid��dashed��dotted*/
+	/*border-top:1px solid #000000;�����ϱ߿�Ϊ1  solidΪʵ�ߵ���˼*/
+	/*border-left:1px solid #000000;������߿�Ϊ1 solidΪʵ�ߵ���˼*/
+	border-bottom:1px solid #000000;/*�����ױ߿�Ϊ1 solidΪʵ�ߵ���˼*/
+	/*color:#000000;*/
+	font:normal 9pt ����,Arial;
+	background-color:transparent;/*������ޱ���ɫ*/
+}
+
+/*����1�ף�---�ž�*/
+/*�Զ���ѡ����ʽ���� class="radio" ��ӵ���ѡ��radio����ѡ��checkbox��<input>����������"ȫ����������ʽ"Ӱ��ĵ�ѡ�򡢶�ѡ��ָ���Ĭ����ʽ*/
+.radio
+{
+	border:none;
+    background-color:transparent;
+}
+
+
+/*����1�ף�С��Ҫ���ӵ�---�ž�*/
+.mask {
+	BEHAVIOR: expression(this.htcurl);
+	OVERFLOW: hidden ;
+	border: 1px #B7B7B7 solid;
+	font-family: "����",font-size: 12px; 
+	Helvetica, sans-serif ;
+	width: 20px;
+	word-wrap:normal;
+	word-wrap : break-word ;
+	word-break : keep-all ;
+	ime-mode:disabled;
+}
+
+
+/*--------------��ť����1������ҳ���ܰ�ť--------------------*/
+/*--------------������ť���ڱ�����Ƕ��İ�ť---------------*/
+/*������2�����ֵİ�ť---�ž�*/
+.BUTTON2
+{
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-TOP: 3px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-BOTTOM: 0px;
+	FONT-SIZE: 9pt; 
+	width:35px;
+	height:16px;
+	background-image: url(button2.gif);
+	background-color:transparent;
+	color:#000000;
+	cursor:hand;
+}
+
+/*������4�����ֵİ�ť---�ž�*/
+.BUTTON4
+{
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-TOP: 3px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-BOTTOM: 0px;
+	FONT-SIZE: 9pt; 
+	width:61px;
+	height:16px;
+	background-image: url(button4.gif);
+	background-color:transparent;
+	color:#000000;
+	cursor:hand;
+}
+
+/*������6�����ֵİ�ť---�ž�*/
+.BUTTON6
+{
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-TOP: 3px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-BOTTOM: 0px;
+	FONT-SIZE: 9pt; 
+	width:90px;
+	height:16px;
+	background-image: url(button6.gif);
+	background-color:transparent;
+	color:#000000;
+	cursor:hand;
+}
+
+/*������8�����ֵİ�ť---�ž�*/
+.BUTTON8
+{
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-TOP: 3px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-BOTTOM: 0px;
+	FONT-SIZE: 9pt; 
+	width:107px;
+	height:16px;
+	background-image: url(button8.gif);
+	background-color:transparent;
+	color:#000000;
+	cursor:hand;
+}
+
+/*������10�����ֵİ�ť---�ž�*/
+.BUTTON10
+{
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-TOP: 3px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-BOTTOM: 0px;
+	FONT-SIZE: 9pt; 
+	width:130px;
+	height:16px;
+	background-image: url(button10.gif);
+	background-color:transparent;
+	color:#000000;
+	cursor:hand;
+}
+
+/*������12�����ֵİ�ť---�ž�*/
+.BUTTON12
+{
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-TOP: 3px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-BOTTOM: 0px;
+	FONT-SIZE: 9pt; 
+	width:164px;
+	height:16px;
+	background-image: url(button12.gif);
+	background-color:transparent;
+	color:#000000;
+	cursor:hand;
+}
+/*--------------������ť���ڱ��⣬ҳ���ڵ����·�ȷ��ȡ���Ȱ�ť---------------*/
+/*������2�����ֵİ�ť---�ž�*/
+.BUTTONs2
+{
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-TOP: 3px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-BOTTOM: 0px;
+	FONT-SIZE: 9pt; 
+	width:35px;
+	height:16px;
+	background-image: url(buttons2.gif);
+	background-color:transparent;
+	color:#000000;
+	cursor:hand;
+}
+
+/*������3�����ֵİ�ť�����ڶ����ּ��һ����С�ո�ť---�ž�*/
+.BUTTONs3
+{
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-TOP: 3px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-BOTTOM: 0px;
+	FONT-SIZE: 9pt; 
+	width:43px;
+	height:16px;
+	background-image: url(buttons3.gif);
+	background-color:transparent;
+	color:#000000;
+	cursor:hand;
+}
+
+/*������4�����ֵİ�ť---�ž�*/
+.BUTTONs4
+{
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-TOP: 3px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-BOTTOM: 0px;
+	FONT-SIZE: 9pt; 
+	width:61px;
+	height:16px;
+	background-image: url(buttons4.gif);
+	background-color:transparent;
+	color:#000000;
+	cursor:hand;
+}
+/*������6�����ֵİ�ť---�ž�*/
+.BUTTONs6
+{
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-TOP: 3px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-BOTTOM: 0px;
+	FONT-SIZE: 9pt; 
+	width:90px;
+	height:16px;
+	background-image: url(buttons6.gif);
+	background-color:transparent;
+	color:#000000;
+	cursor:hand;
+}
+/*������8�����ֵİ�ť---�ž�*/
+.BUTTONs8
+{
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-TOP: 3px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-BOTTOM: 0px;
+	FONT-SIZE: 9pt; 
+	width:107px;
+	height:16px;
+	background-image: url(buttons8.gif);
+	background-color:transparent;
+	color:#000000;
+	cursor:hand;
+}
+/*������10�����ֵİ�ť---�ž�*/
+.BUTTONs10
+{
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-TOP: 3px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-BOTTOM: 0px;
+	FONT-SIZE: 9pt; 
+	width:130px;
+	height:16px;
+	background-image: url(buttons10.gif);
+	background-color:transparent;
+	color:#000000;
+	cursor:hand;
+}
+/*������12�����ֵİ�ť---�ž�*/
+.BUTTONs12
+{
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-TOP: 3px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-BOTTOM: 0px;
+	FONT-SIZE: 9pt; 
+	width:164px;
+	height:16px;
+	background-image: url(buttons12.gif);
+	background-color:transparent;
+	color:#000000;
+	cursor:hand;
+}
+
+
+
+
+
+/*--------------ϸ��--------------------*/
+
+
+/*������ʽ�������Ʊ��Ԫ����Ϊϸ�ߣ���������ҳ---�ž�*/
+/*˵�������ϸ�߱��д�����£�<table width="100%" border="1" bordercolor="#000000" class="bordercollapse">*/
+.bordercollapse{
+	border-collapse:collapse;
+
+}
+
+
+/*ϸ�߱���б���ʽ����������ҳ---�ž�
+�� class="tablebody" ��ӵ�Ŀ��<table  width="100%"  border="1"  bordercolor="#000000" class="tablebody">��
+�� class="tablehead" ��ӵ���table����<tr>����Ϊ��ͷ��ʽ*/
+.tablebody{
+	border-collapse:collapse;/*���Ϊϸ��*/
+	background-color:#FFFFFF;/*�Ǳ�����ɫ����ָ����ߵ���ɫ*/
+	font-family:����,Arial;
+	font-size:9pt;/*������ִ�С*/
+	color:#000000;/*������ֵ���ɫΪ��ɫ*/
+	font-weight:normal;/*�������Ϊ��������*/
+}
+
+/*--------------tr�����趨--------------------*/
+
+
+
+/*tr������ǳ�������ݱ���޸�20px---�ž�*/
+.line1{
+	padding-left:5px;/*tr���ֱ߾���趨*/
+	background-color:#EEF6FD;/*tr������ɫ*/
+	font-family:����,Arial;
+	font-size:9pt;
+	color:#000000;
+	height:20px;
+	/*text-align:center;*/
+	/*�����е����Ϳ�����normal��bold*/
+	font-weight:normal;
+}
+
+/*tr������ǳ�������ݱ�񣬱���޴�С---�ž�*/
+.line1a{
+	padding-left:5px;/*tr���ֱ߾���趨*/
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-right:5px;
+	
+	background-color:#EEF6FD;/*tr������ɫ*/
+	font-family:����,Arial;
+	color:#000000;
+	/*text-align:center;*/
+	/*�����е����Ϳ�����normal��bold*/
+	font-weight:normal;
+}
+
+
+/*tr������ǳ����ɫ�����ݱ���޸�20px---�ž�*/
+.line2{
+
+	padding-left:5px;
+	background-color:#F6F9FD;
+	font-family:����,Arial;
+	font-size:9pt;
+	color:#000000;
+	height:20px;
+	/*text-align:center;*/
+	/*�����е����Ϳ�����normal��bold*/
+	font-weight:normal;
+}
+
+/*tr������ǳ����ɫ�����ݱ�񣬱���޴�С---�ž�*/
+.line2a{
+
+	padding-left:5px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-right:5px;
+	background-color:#F6F9FD;
+	font-family:����,Arial;
+	color:#000000;
+	/*text-align:center;*/
+	/*�����е����Ϳ�����normal��bold*/
+	font-weight:normal;
+}
+/*tr������ǳ�ۣ����ݱ���޸�20px������ְ���ҳ�棬�õĲ���---�ž�*/
+.line3{
+	padding-left:5px;
+	background-color:FCF6F4;
+	font-family:����,Arial;
+	font-size:9pt;
+	color:#000000;
+	height:20px;
+	/*text-align:center;*/
+	/*�����е����Ϳ�����normal��bold*/
+	font-weight:normal;
+}
+
+/*tr����������,��line1��㣬���ݱ���޸�20px��---�ž�*/
+.line4{
+	padding-left:5px;
+	background-color:DDECFA;
+	font-family:����,Arial;
+	font-size:9pt;
+	color:#000000;
+	height:20px;
+	/*text-align:center;*/
+	/*�����е����Ϳ�����normal��bold*/
+	font-weight:normal;
+}
+
+
+/*tr����������,��line1��㣬���ݱ��---�ž�*/
+.line4a{
+	padding-left:5px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-right:5px;
+	background-color:DDECFA;
+	font-family:����,Arial;
+	color:#000000;
+	/*text-align:center;*/
+	/*�����е����Ϳ�����normal��bold*/
+	font-weight:normal;
+}
+
+
+/*--------------------------------right��ҳ����---------------------------------------------*/
+
+/*right��table�ı��ⱳ����ɫ___���*/
+.line5{
+	padding-left:10px;
+	background-color:E2EAF4;
+	font-family:����,Arial;
+	color:#000000;
+	/*text-align:center;*/
+	/*�����е����Ϳ�����normal��bold*/
+	font-weight:normal;
+}
+
+
+
+
+
+
+/*right�Ĵ�table����߿���___���*/
+.tablebody1{
+	border:1 solid #56B1E8;
+}
+
+
+
+
+/*right������Ŀ��table����߿��ߣ����.mbgʹ�ó�Ϊ����Ŀ������___���*/
+.tablebody2{
+	border:1 solid #9DB2D9;
+}
+
+/*right����Ŀ������___���*/
+.mbg{
+	background-color: #85B8E3;
+	background-image: url(../images/right/rt_2.jpg);
+	/*���б���ͼ�ظ���ʽ������repeat-x��repeat-y��no-repeat*/
+	background-repeat: no-repeat;
+	/*���б���ͼ���뷽ʽ������top��center��bottom��left��center��right*/
+	background-position: left top;
+}
+
+/*--------------------------------right��ҳ���ý���---------------------------------------------*/
+
+/*--------------title�����趨������ҳ̧ͷ����������--------------------*/
+
+/*��2��3��ͬ������ɫ���û�����ݱ߾࣬��.titlehand��ͬ����û����Ч����������ȫһ��--�ž�*/
+.title
+{
+	font-size:9pt;/*tr������*/
+	border-top: 1px solid #FFFFFF;/*tr�ϲ�����һ���ױ�*/
+	color: #000000;/*����*/
+	font-family: ����;
+	/*�����е����Ϳ�����normal��bold*/
+	text-align:left;/*tr������У�����Ϊ��left��Ϊright��*/
+	height:20px;
+	/*font-weight:bold;/*tr����Ӵ֣�*/
+	background-image: url(bb.gif);
+	
+}
+
+
+
+/*���ж�����ı�����(���Ϸ�tr)�������title����ȫһ���ģ�ֻ�Ǽ���һ����Ч����������ҳ���۵��˵��ڣ�����������ҳ��Ҳ���õ���*/
+.titlehand
+{
+	font-size:9pt;
+	border-top: 1px solid #FFFFFF;
+	color: #000000;
+	font-family: ����;
+	/*�����е����Ϳ�����normal��bold*/
+	text-align:left;
+	height:20px;
+	background-image: url(bb.gif);
+	cursor:hand;/*����*/
+}
+
+
+
+/*���ж�����ı�����,��titleһ������1��ɫҪǳ����3һ�����������ݵ���߾�Ͷ��߾࣬----�ž�*/
+.title2
+{
+	padding-left:5px;/*��߾�5����*/
+	padding-top:2px;/*���߾�2����*/
+	font-size:9pt;/*9����*/
+	border-top: 1px solid #FFFFFF;/*tr�ϲ�����һ���ױ�*/
+	color: #000000;/*����*/
+	font-family: ����;
+	/*�����е����Ϳ�����normal��bold*/
+	text-align:lieft;/*tr������У�����Ϊ��left��Ϊright��*/
+	height:20px;
+	background-image: url(bb2.gif);}
+
+/*����ͼ��ɫ��1��ɫҪǳ����2һ������ͬ��������Ϊ�Ӵֺ��֣�----�ž�*/
+.title3
+{
+	padding-left:5px;
+	padding-top:2px;
+	font-size:9pt;/*tr������*/
+	border-top: 1px solid #FFFFFF;/*tr�ϲ�����һ���ױ�*/
+	color: #000000;
+	font-family: ����;
+	
+	/*�����е����Ϳ�����normal��bold*/
+	font-weight:bold;/*tr����Ӵ֣�*/
+	text-align:lieft;/*tr������У�����Ϊ��left��Ϊright��*/
+	height:20px;
+	background-image: url(bb2.gif);
+}
+
+
+
+
+
+
+/*���ر���ߣ����磺Ҫ��һ���������еı���"����" "����" "����"������Ԫ����ͨ����Ӧ�ð����·�����ӣ�
+<table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000" style="border-collapse:collapse">
+  <tr> 
+    <td>����</td>
+    <td class="nobottomline">����</td>
+  </tr>
+  <tr> 
+    <td class="norightline">����</td>
+    <td class="noleftline notopline">����</td>
+  </tr>
+</table>
+��������������� */
+.norightline {
+	border-right: 0px none ;
+}
+.noleftline {
+	border-left: 0px none ;
+}
+.notopline {
+	border-top: 0px none ;
+}
+.nobottomline {
+	border-bottom: 0px none ;
+}
+/*������ʽ�������ص�Ԫ���ıߵı����*/
+.noborder {
+	border: 0px none; 
+}
+
+/*���ر���߽���*/
+
+
+
+
+
+/*1��ʹ�ã����Ʊ���ͼΪ���ظ��������������ϣ�left���õ�---�ž�*/
+.noreapt {
+	background-repeat: no-repeat;
+}
+
+
+
+
+/*�߶����ã����ڶ��������м���Ԫ��ĸ߶ȣ������Ҫ�����߶�ֵ���ڴ˴��������*/
+/*�����м�࣬��λ������%��em��px*/
+.lh200{
+	line-height:200%;
+}
+.lh150{
+	line-height:150%;
+}
+.lh120{
+	line-height:120%;
+}
+/*���Ԫ��߶ȣ���λpx*/
+.lh30px{
+    height:30px;
+}
+.lh25px{
+    height:25px;
+}
+.lh20px{
+    height:20px;
+}
+/*�߶����ý���*/
+
+
+
+/*��ѡ��ɫ����Ӧ��������*/
+.white {color: #FFFFFF;}			/*��ɫ*/
+.orenge {color: #FF6600;}			/*��ɫ*/
+.lightred {color: #FF6666;}			/*ǳ��*/
+.redtxt{color: #FF0000;}			/*��ɫ*/
+.alittledarkred {color: #CC0000;}	/*���*/
+.graytxt{color: #666666;}			/*��ɫ*/
+.blue {color: #3366FF;}				/*��ɫ*/
+.darkblue {color: #3366CC;}			/*����*/
+/*��ī��ɫ�����֣�������ҳ������Ŀ��*/
+.darkblue2 {color: #013267;}		/*��ī��*/��
+.darkblue3 {color: #3A6EA1;}		/*����*/
+.darkgreen {color: #336633;}		/*����*/
+
+
+
+
+
+
+.hand{cursor:hand;}/*��Ч��*/
+
+
+/*1���õ�������ְҵ�������½Ǳ����ݵı���ͼ���õ��Ĳ���--�ž�*/
+.rightbj01 {
+	background-attachment: fixed;
+	background-image: url(../images/right/zyjs/01_beijing.jpg);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+
+/*�����С��ϸ���忪ʼ*/
+.pt16c
+{
+	FONT-FAMILY: "����",Arial; 
+	FONT-SIZE: 16pt;
+	font-weight:bold;
+	LINE-HEIGHT: 150%
+} 
+.pt11
+{
+	FONT-FAMILY: "����",Arial; 
+	FONT-SIZE: 11pt;
+	LINE-HEIGHT: 150%
+} 
+/*�����С��ϸ�������*/
+
+/*��������뿪ʼ*/
+.zjj34 {
+	letter-spacing: 6px;
+}
+
+
+.zjj56 {
+	letter-spacing: 3px;
+}
+
+.zjj78 {
+	letter-spacing: 2px;
+}
+
+.zjj90 {
+	letter-spacing: 4px;
+}
+/*������������*/
+
+
+/*Ӣ�����ֻ򵥴�ǿ�ƻ���*/
+.wordbreak {
+	WORD-BREAK: break-all;/*Ӣ��ǿ�ƻ���*/
+	WORD-WRAP: break-word;/*����ǿ�ƻ���*/
+}
+
+
+.wordkeep {
+	WORD-BREAK: keep-all;/*Ӣ�����ֲ�����*/
+	WORD-WRAP: normal;
+}
+
+/*___________________________��������_____________________________*/
+
+
+
+/*����2�ף�left2��ݹ��߱���ͼ����ɫ����--�ž�_*/
+.leftbgtd1 {
+	background-color: #769FB9;
+	background-image: url(../images/left/b_1.jpg);
+	/*���б���ͼ�ظ���ʽ������repeat-x��repeat-y��no-repeat*/
+	background-repeat: repeat-x;
+	/*���б���ͼ���뷽ʽ������top��center��bottom��left��center��right*/
+	background-position: left top;
+}
+
+
+/*����2�ף�left2��ݹ��߱���ͼ��ߵ���ɫ�׵�԰��--�ž�_*/
+.lefttd1_1 {
+	background-image: url(../images/left/b_2.jpg);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+/*����2�ף�left2��ݹ���������������--�ž�_*/
+.kjgj {	FONT-SIZE: 9pt;color: 003060;	text-decoration: none;line-height: 180%;
+}
+.kjgj:link {
+	FONT-SIZE: 9pt; COLOR: #003060; TEXT-DECORATION: none;line-height: 180%;
+}
+.kjgj:visited {
+	FONT-SIZE: 9pt; COLOR: #003060; TEXT-DECORATION: none;line-height: 180%;
+}
+.kjgj1:active {
+	FONT-SIZE: 9pt; COLOR: #003060; TEXT-DECORATION: none;line-height: 180%;
+}
+.kjgj:hover {
+	FONT-SIZE: 9pt; COLOR: #396D8C; TEXT-DECORATION: none;line-height: 180%;
+}
+
+/*����2�ף�left2�ҵĹ���������������Ŀ����--�ž�_*/
+.zi1 {FONT-SIZE: 9pt;color: 0E86C2;text-decoration: none;line-height: 180%;
+}
+.zi1:link {
+	FONT-SIZE: 9pt; COLOR: #0E86C2; TEXT-DECORATION: none;line-height: 180%;
+}
+.zi1:visited {
+	FONT-SIZE: 9pt; COLOR: #0E86C2; TEXT-DECORATION: none;line-height: 180%;
+}
+.zi1:active {
+	FONT-SIZE: 9pt; COLOR: #0E86C2; TEXT-DECORATION: none;line-height: 180%;
+}
+.zi1:hover {
+	FONT-SIZE: 9pt; COLOR: #46ABDE; TEXT-DECORATION: none;line-height: 180%;
+}
+
+/*����2�ף�left2�ҵĹ���������Ŀ��������Ŀ����--�ž�_*/
+.zi2 {FONT-SIZE: 9pt;color: 0D5F88;text-decoration: none;line-height: 140%;
+}
+.zi2:link {
+	FONT-SIZE: 9pt; COLOR: #0D5F88; TEXT-DECORATION: none;line-height: 140%;
+}
+.zi2:visited {
+	FONT-SIZE: 9pt; COLOR: #0D5F88; TEXT-DECORATION: none;line-height: 140%;
+}
+.zi2:active {
+	FONT-SIZE: 9pt; COLOR: #0D5F88; TEXT-DECORATION: none;line-height: 140%;
+}
+.zi2:hover {
+	FONT-SIZE: 9pt; COLOR: #0E86C2; TEXT-DECORATION: none;line-height: 140%;
+}
+
+/*�ұ߾�5����*/
+.right5 {
+padding-right:5px;/*�ұ߾�5����*/
+
+}
+/*��߾�5����*/
+.left5 {
+padding-left:5px;/*�ұ߾�5����*/
+
+}
+
+
+
+
+/*�������ڱ������ã��ϱ���*/
+.tcckb1 {
+	background-attachment: fixed;
+	background-image: url(../images/right/tcck/b_1.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+
+
+/*�������ڱ������ã��±���*/
+.tcckb2 {
+	background-attachment: fixed;
+	background-image: url(../images/right/tcck/b_2.jpg);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+/*_�޺Ƽ��������Ч��_*/
+/*������td��ʱtd��������ɫ�������������my.htc���Ǹ��ļ��Ǿ��������*/
+.overtd {
+	FONT-SIZE: 9pt;color:#ffffff;TEXT-DECORATION: none; BEHAVIOR: url(styles/1/css/my.htc);cursor:hand;
+}
+
+/*�����������ĵĴ�ӡ���������»���*/
+.underline {
+	TEXT-DECORATION: underline;
+}
+
+
+
+

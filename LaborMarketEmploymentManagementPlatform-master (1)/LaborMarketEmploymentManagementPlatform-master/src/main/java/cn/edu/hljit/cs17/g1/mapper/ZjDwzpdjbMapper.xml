@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.edu.hljit.cs17.g1.dao.ZjDwzpdjbMapper" >
+  <resultMap id="BaseResultMap" type="cn.edu.hljit.cs17.g1.pojo.ZjDwzpdjb" >
+    <id column="ZPBH" property="zpbh" jdbcType="VARCHAR" />
+    <result column="DWBH" property="dwbh" jdbcType="VARCHAR" />
+    <result column="DWLXR" property="dwlxr" jdbcType="VARCHAR" />
+    <result column="LXRSFZHM" property="lxrsfzhm" jdbcType="VARCHAR" />
+    <result column="LXRSJ" property="lxrsj" jdbcType="VARCHAR" />
+    <result column="SFDJ" property="sfdj" jdbcType="VARCHAR" />
+    <result column="DJYXQ" property="djyxq" jdbcType="INTEGER" />
+    <result column="DJSJ" property="djsj" jdbcType="VARCHAR" />
+    <result column="GDSJ" property="gdsj" jdbcType="VARCHAR" />
+    <result column="SFGD" property="sfgd" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ZPBH, DWBH, DWLXR, LXRSFZHM, LXRSJ, SFDJ, DJYXQ, DJSJ, GDSJ, SFGD
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from zj_dwzpdjb
+    where ZPBH = #{zpbh,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from zj_dwzpdjb
+    where ZPBH = #{zpbh,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.edu.hljit.cs17.g1.pojo.ZjDwzpdjb" >
+    insert into zj_dwzpdjb (ZPBH, DWBH, DWLXR, 
+      LXRSFZHM, LXRSJ, SFDJ, 
+      DJYXQ, DJSJ, GDSJ, 
+      SFGD)
+    values (#{zpbh,jdbcType=VARCHAR}, #{dwbh,jdbcType=VARCHAR}, #{dwlxr,jdbcType=VARCHAR}, 
+      #{lxrsfzhm,jdbcType=VARCHAR}, #{lxrsj,jdbcType=VARCHAR}, #{sfdj,jdbcType=VARCHAR}, 
+      #{djyxq,jdbcType=INTEGER}, #{djsj,jdbcType=VARCHAR}, #{gdsj,jdbcType=VARCHAR}, 
+      #{sfgd,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.edu.hljit.cs17.g1.pojo.ZjDwzpdjb" >
+    insert into zj_dwzpdjb
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="zpbh != null" >
+        ZPBH,
+      </if>
+      <if test="dwbh != null" >
+        DWBH,
+      </if>
+      <if test="dwlxr != null" >
+        DWLXR,
+      </if>
+      <if test="lxrsfzhm != null" >
+        LXRSFZHM,
+      </if>
+      <if test="lxrsj != null" >
+        LXRSJ,
+      </if>
+      <if test="sfdj != null" >
+        SFDJ,
+      </if>
+      <if test="djyxq != null" >
+        DJYXQ,
+      </if>
+      <if test="djsj != null" >
+        DJSJ,
+      </if>
+      <if test="gdsj != null" >
+        GDSJ,
+      </if>
+      <if test="sfgd != null" >
+        SFGD,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="zpbh != null" >
+        #{zpbh,jdbcType=VARCHAR},
+      </if>
+      <if test="dwbh != null" >
+        #{dwbh,jdbcType=VARCHAR},
+      </if>
+      <if test="dwlxr != null" >
+        #{dwlxr,jdbcType=VARCHAR},
+      </if>
+      <if test="lxrsfzhm != null" >
+        #{lxrsfzhm,jdbcType=VARCHAR},
+      </if>
+      <if test="lxrsj != null" >
+        #{lxrsj,jdbcType=VARCHAR},
+      </if>
+      <if test="sfdj != null" >
+        #{sfdj,jdbcType=VARCHAR},
+      </if>
+      <if test="djyxq != null" >
+        #{djyxq,jdbcType=INTEGER},
+      </if>
+      <if test="djsj != null" >
+        #{djsj,jdbcType=VARCHAR},
+      </if>
+      <if test="gdsj != null" >
+        #{gdsj,jdbcType=VARCHAR},
+      </if>
+      <if test="sfgd != null" >
+        #{sfgd,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.edu.hljit.cs17.g1.pojo.ZjDwzpdjb" >
+    update zj_dwzpdjb
+    <set >
+      <if test="dwbh != null" >
+        DWBH = #{dwbh,jdbcType=VARCHAR},
+      </if>
+      <if test="dwlxr != null" >
+        DWLXR = #{dwlxr,jdbcType=VARCHAR},
+      </if>
+      <if test="lxrsfzhm != null" >
+        LXRSFZHM = #{lxrsfzhm,jdbcType=VARCHAR},
+      </if>
+      <if test="lxrsj != null" >
+        LXRSJ = #{lxrsj,jdbcType=VARCHAR},
+      </if>
+      <if test="sfdj != null" >
+        SFDJ = #{sfdj,jdbcType=VARCHAR},
+      </if>
+      <if test="djyxq != null" >
+        DJYXQ = #{djyxq,jdbcType=INTEGER},
+      </if>
+      <if test="djsj != null" >
+        DJSJ = #{djsj,jdbcType=VARCHAR},
+      </if>
+      <if test="gdsj != null" >
+        GDSJ = #{gdsj,jdbcType=VARCHAR},
+      </if>
+      <if test="sfgd != null" >
+        SFGD = #{sfgd,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ZPBH = #{zpbh,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.edu.hljit.cs17.g1.pojo.ZjDwzpdjb" >
+    update zj_dwzpdjb
+    set DWBH = #{dwbh,jdbcType=VARCHAR},
+      DWLXR = #{dwlxr,jdbcType=VARCHAR},
+      LXRSFZHM = #{lxrsfzhm,jdbcType=VARCHAR},
+      LXRSJ = #{lxrsj,jdbcType=VARCHAR},
+      SFDJ = #{sfdj,jdbcType=VARCHAR},
+      DJYXQ = #{djyxq,jdbcType=INTEGER},
+      DJSJ = #{djsj,jdbcType=VARCHAR},
+      GDSJ = #{gdsj,jdbcType=VARCHAR},
+      SFGD = #{sfgd,jdbcType=VARCHAR}
+    where ZPBH = #{zpbh,jdbcType=VARCHAR}
+  </update>
+</mapper>

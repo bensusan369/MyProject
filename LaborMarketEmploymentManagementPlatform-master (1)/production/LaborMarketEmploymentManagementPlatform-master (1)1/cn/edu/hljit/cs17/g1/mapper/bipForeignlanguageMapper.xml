@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.edu.hljit.cs17.g1.dao.bipForeignlanguageMapper" >
+  <resultMap id="BaseResultMap" type="cn.edu.hljit.cs17.g1.pojo.bipForeignlanguage" >
+    <id column="bip_fl_id" property="bipFlId" jdbcType="VARCHAR" />
+    <result column="bip_id" property="bipId" jdbcType="VARCHAR" />
+    <result column="bip_fl_years" property="bipFlYears" jdbcType="VARCHAR" />
+    <result column="bip_fl_jywy" property="bipFlJywy" jdbcType="VARCHAR" />
+    <result column="bip_fl_wysm" property="bipFlWysm" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    bip_fl_id, bip_id, bip_fl_years, bip_fl_jywy, bip_fl_wysm
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from bip_foreignlanguage
+    where bip_fl_id = #{bipFlId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from bip_foreignlanguage
+    where bip_fl_id = #{bipFlId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.edu.hljit.cs17.g1.pojo.bipForeignlanguage" >
+    insert into bip_foreignlanguage (bip_fl_id, bip_id, bip_fl_years, 
+      bip_fl_jywy, bip_fl_wysm)
+    values (#{bipFlId,jdbcType=VARCHAR}, #{bipId,jdbcType=VARCHAR}, #{bipFlYears,jdbcType=VARCHAR}, 
+      #{bipFlJywy,jdbcType=VARCHAR}, #{bipFlWysm,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.edu.hljit.cs17.g1.pojo.bipForeignlanguage" >
+    insert into bip_foreignlanguage
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="bipFlId != null" >
+        bip_fl_id,
+      </if>
+      <if test="bipId != null" >
+        bip_id,
+      </if>
+      <if test="bipFlYears != null" >
+        bip_fl_years,
+      </if>
+      <if test="bipFlJywy != null" >
+        bip_fl_jywy,
+      </if>
+      <if test="bipFlWysm != null" >
+        bip_fl_wysm,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="bipFlId != null" >
+        #{bipFlId,jdbcType=VARCHAR},
+      </if>
+      <if test="bipId != null" >
+        #{bipId,jdbcType=VARCHAR},
+      </if>
+      <if test="bipFlYears != null" >
+        #{bipFlYears,jdbcType=VARCHAR},
+      </if>
+      <if test="bipFlJywy != null" >
+        #{bipFlJywy,jdbcType=VARCHAR},
+      </if>
+      <if test="bipFlWysm != null" >
+        #{bipFlWysm,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.edu.hljit.cs17.g1.pojo.bipForeignlanguage" >
+    update bip_foreignlanguage
+    <set >
+      <if test="bipId != null" >
+        bip_id = #{bipId,jdbcType=VARCHAR},
+      </if>
+      <if test="bipFlYears != null" >
+        bip_fl_years = #{bipFlYears,jdbcType=VARCHAR},
+      </if>
+      <if test="bipFlJywy != null" >
+        bip_fl_jywy = #{bipFlJywy,jdbcType=VARCHAR},
+      </if>
+      <if test="bipFlWysm != null" >
+        bip_fl_wysm = #{bipFlWysm,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where bip_fl_id = #{bipFlId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.edu.hljit.cs17.g1.pojo.bipForeignlanguage" >
+    update bip_foreignlanguage
+    set bip_id = #{bipId,jdbcType=VARCHAR},
+      bip_fl_years = #{bipFlYears,jdbcType=VARCHAR},
+      bip_fl_jywy = #{bipFlJywy,jdbcType=VARCHAR},
+      bip_fl_wysm = #{bipFlWysm,jdbcType=VARCHAR}
+    where bip_fl_id = #{bipFlId,jdbcType=VARCHAR}
+  </update>
+</mapper>

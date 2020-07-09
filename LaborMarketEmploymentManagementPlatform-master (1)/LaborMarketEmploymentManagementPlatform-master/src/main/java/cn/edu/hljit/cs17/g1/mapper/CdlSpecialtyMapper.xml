@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.edu.hljit.cs17.g1.dao.CdlSpecialtyMapper" >
+  <resultMap id="BaseResultMap" type="cn.edu.hljit.cs17.g1.pojo.CdlSpecialty" >
+    <id column="cd_id" property="cdId" jdbcType="VARCHAR" />
+    <result column="cd_name" property="cdName" jdbcType="VARCHAR" />
+    <result column="cd_availability" property="cdAvailability" jdbcType="VARCHAR" />
+    <result column="cd_index" property="cdIndex" jdbcType="INTEGER" />
+    <result column="cd_spell" property="cdSpell" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    cd_id, cd_name, cd_availability, cd_index, cd_spell
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from cdl_specialty
+    where cd_id = #{cdId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from cdl_specialty
+    where cd_id = #{cdId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.edu.hljit.cs17.g1.pojo.CdlSpecialty" >
+    insert into cdl_specialty (cd_id, cd_name, cd_availability, 
+      cd_index, cd_spell)
+    values (#{cdId,jdbcType=VARCHAR}, #{cdName,jdbcType=VARCHAR}, #{cdAvailability,jdbcType=VARCHAR}, 
+      #{cdIndex,jdbcType=INTEGER}, #{cdSpell,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.edu.hljit.cs17.g1.pojo.CdlSpecialty" >
+    insert into cdl_specialty
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="cdId != null" >
+        cd_id,
+      </if>
+      <if test="cdName != null" >
+        cd_name,
+      </if>
+      <if test="cdAvailability != null" >
+        cd_availability,
+      </if>
+      <if test="cdIndex != null" >
+        cd_index,
+      </if>
+      <if test="cdSpell != null" >
+        cd_spell,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="cdId != null" >
+        #{cdId,jdbcType=VARCHAR},
+      </if>
+      <if test="cdName != null" >
+        #{cdName,jdbcType=VARCHAR},
+      </if>
+      <if test="cdAvailability != null" >
+        #{cdAvailability,jdbcType=VARCHAR},
+      </if>
+      <if test="cdIndex != null" >
+        #{cdIndex,jdbcType=INTEGER},
+      </if>
+      <if test="cdSpell != null" >
+        #{cdSpell,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.edu.hljit.cs17.g1.pojo.CdlSpecialty" >
+    update cdl_specialty
+    <set >
+      <if test="cdName != null" >
+        cd_name = #{cdName,jdbcType=VARCHAR},
+      </if>
+      <if test="cdAvailability != null" >
+        cd_availability = #{cdAvailability,jdbcType=VARCHAR},
+      </if>
+      <if test="cdIndex != null" >
+        cd_index = #{cdIndex,jdbcType=INTEGER},
+      </if>
+      <if test="cdSpell != null" >
+        cd_spell = #{cdSpell,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where cd_id = #{cdId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.edu.hljit.cs17.g1.pojo.CdlSpecialty" >
+    update cdl_specialty
+    set cd_name = #{cdName,jdbcType=VARCHAR},
+      cd_availability = #{cdAvailability,jdbcType=VARCHAR},
+      cd_index = #{cdIndex,jdbcType=INTEGER},
+      cd_spell = #{cdSpell,jdbcType=VARCHAR}
+    where cd_id = #{cdId,jdbcType=VARCHAR}
+  </update>
+</mapper>

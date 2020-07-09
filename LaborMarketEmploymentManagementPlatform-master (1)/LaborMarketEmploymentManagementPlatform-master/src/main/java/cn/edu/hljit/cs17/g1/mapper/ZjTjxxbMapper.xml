@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.edu.hljit.cs17.g1.dao.ZjTjxxbMapper" >
+  <resultMap id="BaseResultMap" type="cn.edu.hljit.cs17.g1.pojo.ZjTjxxb" >
+    <id column="TJXID" property="tjxid" jdbcType="VARCHAR" />
+    <result column="TJXLX" property="tjxlx" jdbcType="VARCHAR" />
+    <result column="QZGZBH" property="qzgzbh" jdbcType="VARCHAR" />
+    <result column="ZPGZBH" property="zpgzbh" jdbcType="VARCHAR" />
+    <result column="TJSJ" property="tjsj" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    TJXID, TJXLX, QZGZBH, ZPGZBH, TJSJ
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from zj_tjxxb
+    where TJXID = #{tjxid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from zj_tjxxb
+    where TJXID = #{tjxid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.edu.hljit.cs17.g1.pojo.ZjTjxxb" >
+    insert into zj_tjxxb (TJXID, TJXLX, QZGZBH, 
+      ZPGZBH, TJSJ)
+    values (#{tjxid,jdbcType=VARCHAR}, #{tjxlx,jdbcType=VARCHAR}, #{qzgzbh,jdbcType=VARCHAR}, 
+      #{zpgzbh,jdbcType=VARCHAR}, #{tjsj,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.edu.hljit.cs17.g1.pojo.ZjTjxxb" >
+    insert into zj_tjxxb
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="tjxid != null" >
+        TJXID,
+      </if>
+      <if test="tjxlx != null" >
+        TJXLX,
+      </if>
+      <if test="qzgzbh != null" >
+        QZGZBH,
+      </if>
+      <if test="zpgzbh != null" >
+        ZPGZBH,
+      </if>
+      <if test="tjsj != null" >
+        TJSJ,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="tjxid != null" >
+        #{tjxid,jdbcType=VARCHAR},
+      </if>
+      <if test="tjxlx != null" >
+        #{tjxlx,jdbcType=VARCHAR},
+      </if>
+      <if test="qzgzbh != null" >
+        #{qzgzbh,jdbcType=VARCHAR},
+      </if>
+      <if test="zpgzbh != null" >
+        #{zpgzbh,jdbcType=VARCHAR},
+      </if>
+      <if test="tjsj != null" >
+        #{tjsj,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.edu.hljit.cs17.g1.pojo.ZjTjxxb" >
+    update zj_tjxxb
+    <set >
+      <if test="tjxlx != null" >
+        TJXLX = #{tjxlx,jdbcType=VARCHAR},
+      </if>
+      <if test="qzgzbh != null" >
+        QZGZBH = #{qzgzbh,jdbcType=VARCHAR},
+      </if>
+      <if test="zpgzbh != null" >
+        ZPGZBH = #{zpgzbh,jdbcType=VARCHAR},
+      </if>
+      <if test="tjsj != null" >
+        TJSJ = #{tjsj,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TJXID = #{tjxid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.edu.hljit.cs17.g1.pojo.ZjTjxxb" >
+    update zj_tjxxb
+    set TJXLX = #{tjxlx,jdbcType=VARCHAR},
+      QZGZBH = #{qzgzbh,jdbcType=VARCHAR},
+      ZPGZBH = #{zpgzbh,jdbcType=VARCHAR},
+      TJSJ = #{tjsj,jdbcType=VARCHAR}
+    where TJXID = #{tjxid,jdbcType=VARCHAR}
+  </update>
+</mapper>

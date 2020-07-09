@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.edu.hljit.cs17.g1.dao.BioMapper" >
+  <resultMap id="BaseResultMap" type="cn.edu.hljit.cs17.g1.pojo.Bio" >
+    <id column="bio_id" property="bioId" jdbcType="VARCHAR" />
+    <result column="bio_no" property="bioNo" jdbcType="VARCHAR" />
+    <result column="bio_name" property="bioName" jdbcType="VARCHAR" />
+    <result column="bio_shortname" property="bioShortname" jdbcType="VARCHAR" />
+    <result column="bio_orgtype" property="bioOrgtype" jdbcType="VARCHAR" />
+    <result column="cdg_regtype" property="cdgRegtype" jdbcType="VARCHAR" />
+    <result column="bio_industry" property="bioIndustry" jdbcType="VARCHAR" />
+    <result column="bio_rga_regioncode" property="bioRgaRegioncode" jdbcType="VARCHAR" />
+    <result column="bio_bua_postcode" property="bioBuaPostcode" jdbcType="VARCHAR" />
+    <result column="bio_con_fax" property="bioConFax" jdbcType="VARCHAR" />
+    <result column="bio_con_mail" property="bioConMail" jdbcType="VARCHAR" />
+    <result column="bio_bua_address" property="bioBuaAddress" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    bio_id, bio_no, bio_name, bio_shortname, bio_orgtype, cdg_regtype, bio_industry, 
+    bio_rga_regioncode, bio_bua_postcode, bio_con_fax, bio_con_mail, bio_bua_address
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from bio
+    where bio_id = #{bioId,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByBioNo" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from bio
+    where bio_no = #{bioNo,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from bio
+    where bio_id = #{bioId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.edu.hljit.cs17.g1.pojo.Bio" >
+    insert into bio (bio_id, bio_no, bio_name, 
+      bio_shortname, bio_orgtype, cdg_regtype, 
+      bio_industry, bio_rga_regioncode, bio_bua_postcode, 
+      bio_con_fax, bio_con_mail, bio_bua_address
+      )
+    values (#{bioId,jdbcType=VARCHAR}, #{bioNo,jdbcType=VARCHAR}, #{bioName,jdbcType=VARCHAR}, 
+      #{bioShortname,jdbcType=VARCHAR}, #{bioOrgtype,jdbcType=VARCHAR}, #{cdgRegtype,jdbcType=VARCHAR}, 
+      #{bioIndustry,jdbcType=VARCHAR}, #{bioRgaRegioncode,jdbcType=VARCHAR}, #{bioBuaPostcode,jdbcType=VARCHAR}, 
+      #{bioConFax,jdbcType=VARCHAR}, #{bioConMail,jdbcType=VARCHAR}, #{bioBuaAddress,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.edu.hljit.cs17.g1.pojo.Bio" >
+    insert into bio
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="bioId != null" >
+        bio_id,
+      </if>
+      <if test="bioNo != null" >
+        bio_no,
+      </if>
+      <if test="bioName != null" >
+        bio_name,
+      </if>
+      <if test="bioShortname != null" >
+        bio_shortname,
+      </if>
+      <if test="bioOrgtype != null" >
+        bio_orgtype,
+      </if>
+      <if test="cdgRegtype != null" >
+        cdg_regtype,
+      </if>
+      <if test="bioIndustry != null" >
+        bio_industry,
+      </if>
+      <if test="bioRgaRegioncode != null" >
+        bio_rga_regioncode,
+      </if>
+      <if test="bioBuaPostcode != null" >
+        bio_bua_postcode,
+      </if>
+      <if test="bioConFax != null" >
+        bio_con_fax,
+      </if>
+      <if test="bioConMail != null" >
+        bio_con_mail,
+      </if>
+      <if test="bioBuaAddress != null" >
+        bio_bua_address,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="bioId != null" >
+        #{bioId,jdbcType=VARCHAR},
+      </if>
+      <if test="bioNo != null" >
+        #{bioNo,jdbcType=VARCHAR},
+      </if>
+      <if test="bioName != null" >
+        #{bioName,jdbcType=VARCHAR},
+      </if>
+      <if test="bioShortname != null" >
+        #{bioShortname,jdbcType=VARCHAR},
+      </if>
+      <if test="bioOrgtype != null" >
+        #{bioOrgtype,jdbcType=VARCHAR},
+      </if>
+      <if test="cdgRegtype != null" >
+        #{cdgRegtype,jdbcType=VARCHAR},
+      </if>
+      <if test="bioIndustry != null" >
+        #{bioIndustry,jdbcType=VARCHAR},
+      </if>
+      <if test="bioRgaRegioncode != null" >
+        #{bioRgaRegioncode,jdbcType=VARCHAR},
+      </if>
+      <if test="bioBuaPostcode != null" >
+        #{bioBuaPostcode,jdbcType=VARCHAR},
+      </if>
+      <if test="bioConFax != null" >
+        #{bioConFax,jdbcType=VARCHAR},
+      </if>
+      <if test="bioConMail != null" >
+        #{bioConMail,jdbcType=VARCHAR},
+      </if>
+      <if test="bioBuaAddress != null" >
+        #{bioBuaAddress,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.edu.hljit.cs17.g1.pojo.Bio" >
+    update bio
+    <set >
+      <if test="bioNo != null" >
+        bio_no = #{bioNo,jdbcType=VARCHAR},
+      </if>
+      <if test="bioName != null" >
+        bio_name = #{bioName,jdbcType=VARCHAR},
+      </if>
+      <if test="bioShortname != null" >
+        bio_shortname = #{bioShortname,jdbcType=VARCHAR},
+      </if>
+      <if test="bioOrgtype != null" >
+        bio_orgtype = #{bioOrgtype,jdbcType=VARCHAR},
+      </if>
+      <if test="cdgRegtype != null" >
+        cdg_regtype = #{cdgRegtype,jdbcType=VARCHAR},
+      </if>
+      <if test="bioIndustry != null" >
+        bio_industry = #{bioIndustry,jdbcType=VARCHAR},
+      </if>
+      <if test="bioRgaRegioncode != null" >
+        bio_rga_regioncode = #{bioRgaRegioncode,jdbcType=VARCHAR},
+      </if>
+      <if test="bioBuaPostcode != null" >
+        bio_bua_postcode = #{bioBuaPostcode,jdbcType=VARCHAR},
+      </if>
+      <if test="bioConFax != null" >
+        bio_con_fax = #{bioConFax,jdbcType=VARCHAR},
+      </if>
+      <if test="bioConMail != null" >
+        bio_con_mail = #{bioConMail,jdbcType=VARCHAR},
+      </if>
+      <if test="bioBuaAddress != null" >
+        bio_bua_address = #{bioBuaAddress,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where bio_id = #{bioId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.edu.hljit.cs17.g1.pojo.Bio" >
+    update bio
+    set bio_no = #{bioNo,jdbcType=VARCHAR},
+      bio_name = #{bioName,jdbcType=VARCHAR},
+      bio_shortname = #{bioShortname,jdbcType=VARCHAR},
+      bio_orgtype = #{bioOrgtype,jdbcType=VARCHAR},
+      cdg_regtype = #{cdgRegtype,jdbcType=VARCHAR},
+      bio_industry = #{bioIndustry,jdbcType=VARCHAR},
+      bio_rga_regioncode = #{bioRgaRegioncode,jdbcType=VARCHAR},
+      bio_bua_postcode = #{bioBuaPostcode,jdbcType=VARCHAR},
+      bio_con_fax = #{bioConFax,jdbcType=VARCHAR},
+      bio_con_mail = #{bioConMail,jdbcType=VARCHAR},
+      bio_bua_address = #{bioBuaAddress,jdbcType=VARCHAR}
+    where bio_id = #{bioId,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.edu.hljit.cs17.g1.dao.ZjDwdjjdbMapper" >
+  <resultMap id="BaseResultMap" type="cn.edu.hljit.cs17.g1.pojo.ZjDwdjjdb" >
+    <id column="DWDJJDBH" property="dwdjjdbh" jdbcType="VARCHAR" />
+    <result column="ZPBH" property="zpbh" jdbcType="VARCHAR" />
+    <result column="DJYY" property="djyy" jdbcType="VARCHAR" />
+    <result column="DJSJ" property="djsj" jdbcType="VARCHAR" />
+    <result column="JDYY" property="jdyy" jdbcType="VARCHAR" />
+    <result column="JDSJ" property="jdsj" jdbcType="VARCHAR" />
+    <result column="GDSJ" property="gdsj" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    DWDJJDBH, ZPBH, DJYY, DJSJ, JDYY, JDSJ, GDSJ
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from zj_dwdjjdb
+    where DWDJJDBH = #{dwdjjdbh,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from zj_dwdjjdb
+    where DWDJJDBH = #{dwdjjdbh,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.edu.hljit.cs17.g1.pojo.ZjDwdjjdb" >
+    insert into zj_dwdjjdb (DWDJJDBH, ZPBH, DJYY, 
+      DJSJ, JDYY, JDSJ, GDSJ
+      )
+    values (#{dwdjjdbh,jdbcType=VARCHAR}, #{zpbh,jdbcType=VARCHAR}, #{djyy,jdbcType=VARCHAR}, 
+      #{djsj,jdbcType=VARCHAR}, #{jdyy,jdbcType=VARCHAR}, #{jdsj,jdbcType=VARCHAR}, #{gdsj,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.edu.hljit.cs17.g1.pojo.ZjDwdjjdb" >
+    insert into zj_dwdjjdb
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="dwdjjdbh != null" >
+        DWDJJDBH,
+      </if>
+      <if test="zpbh != null" >
+        ZPBH,
+      </if>
+      <if test="djyy != null" >
+        DJYY,
+      </if>
+      <if test="djsj != null" >
+        DJSJ,
+      </if>
+      <if test="jdyy != null" >
+        JDYY,
+      </if>
+      <if test="jdsj != null" >
+        JDSJ,
+      </if>
+      <if test="gdsj != null" >
+        GDSJ,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="dwdjjdbh != null" >
+        #{dwdjjdbh,jdbcType=VARCHAR},
+      </if>
+      <if test="zpbh != null" >
+        #{zpbh,jdbcType=VARCHAR},
+      </if>
+      <if test="djyy != null" >
+        #{djyy,jdbcType=VARCHAR},
+      </if>
+      <if test="djsj != null" >
+        #{djsj,jdbcType=VARCHAR},
+      </if>
+      <if test="jdyy != null" >
+        #{jdyy,jdbcType=VARCHAR},
+      </if>
+      <if test="jdsj != null" >
+        #{jdsj,jdbcType=VARCHAR},
+      </if>
+      <if test="gdsj != null" >
+        #{gdsj,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.edu.hljit.cs17.g1.pojo.ZjDwdjjdb" >
+    update zj_dwdjjdb
+    <set >
+      <if test="zpbh != null" >
+        ZPBH = #{zpbh,jdbcType=VARCHAR},
+      </if>
+      <if test="djyy != null" >
+        DJYY = #{djyy,jdbcType=VARCHAR},
+      </if>
+      <if test="djsj != null" >
+        DJSJ = #{djsj,jdbcType=VARCHAR},
+      </if>
+      <if test="jdyy != null" >
+        JDYY = #{jdyy,jdbcType=VARCHAR},
+      </if>
+      <if test="jdsj != null" >
+        JDSJ = #{jdsj,jdbcType=VARCHAR},
+      </if>
+      <if test="gdsj != null" >
+        GDSJ = #{gdsj,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where DWDJJDBH = #{dwdjjdbh,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.edu.hljit.cs17.g1.pojo.ZjDwdjjdb" >
+    update zj_dwdjjdb
+    set ZPBH = #{zpbh,jdbcType=VARCHAR},
+      DJYY = #{djyy,jdbcType=VARCHAR},
+      DJSJ = #{djsj,jdbcType=VARCHAR},
+      JDYY = #{jdyy,jdbcType=VARCHAR},
+      JDSJ = #{jdsj,jdbcType=VARCHAR},
+      GDSJ = #{gdsj,jdbcType=VARCHAR}
+    where DWDJJDBH = #{dwdjjdbh,jdbcType=VARCHAR}
+  </update>
+</mapper>
